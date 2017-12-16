@@ -1,4 +1,5 @@
 #define DEFAULT_HUNGER_FACTOR 0.03 // Factor of how fast mob nutrition decreases
+#define LARGE_HUNGER_FACTOR 0.05 // Factor of how fast mob nutrition decreases
 
 #define REM 0.2 // Means 'Reagent Effect Multiplier'. This is how many units of reagent are consumed per tick
 
@@ -25,6 +26,7 @@
 #define IS_XENOS   6
 #define IS_SLIME   8
 #define IS_NABBER  9
+#define IS_ZAKASI  10
 
 #define CE_STABLE        "stable"       // Inaprovaline
 #define CE_ANTIBIOTIC    "antibiotic"   // Spaceacilin

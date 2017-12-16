@@ -189,6 +189,7 @@
 #define BP_POLYP    "polyp segment"
 #define BP_ANCHOR   "anchoring ligament"
 #define BP_PHORON   "phoron filter"
+#define BP_EARS   	"ears"
 
 // Robo Organs.
 #define BP_POSIBRAIN	"posibrain"
@@ -260,6 +261,7 @@
 #define SPECIES_PROMETHEAN "Promethean"
 #define SPECIES_BOGANI "Bogani"
 #define SPECIES_EGYNO "Egyno"
+#define SPECIES_ZAKASI "Zakasi"
 
 #define SURGERY_CLOSED 0
 #define SURGERY_OPEN 1

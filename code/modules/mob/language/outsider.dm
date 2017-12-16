@@ -85,6 +85,39 @@
 /datum/language/vox/get_random_name()
 	return ..(FEMALE,1,6)
 
+/datum/language/zakasi
+	name = "Zakasi"
+	desc = "The annoying secret language of the Zakasi space pirates."
+	speech_verb = "gibbers"
+	whisper_verb = "titters softly"
+	ask_verb = "sneers"
+	exclaim_verb = "cackles"
+	colour = "zakasi"
+	key = "z"
+	flags = RESTRICTED
+	syllables = list("rik","kree","riki","krik","yik","kiki","ki","ka","rak","kra","rakka","ha","hirri","ya", \
+		"skree","irrik","ik","zik","ziki","izi","aza","hara","ichi","richi","kirri","karra","harra","yirri","rizi", \
+		"yarra","raza","kaza","chi","chik","cha","kah","zirri","zarra","shik","shak","sharra","shirri","Shizi", \
+		"shaza","hai", "rai", "kai", "haik", "raik", "Kairri", "kik","kak","kek","lol")
+	machine_understands = 0
+
+/datum/language/zakasi/get_random_name(var/gender)
+	var/new_name = pick("kik","kak","shiz","shaz","shik","rik","rak","zish","zash","haik","hik","chik","raksh","reeksh");
+	if(gender==MALE)
+		new_name += pick("irrik","irrak","arrik","arrak")
+	else
+		new_name += pick("irri","irra","arri","arra")
+	return new_name
+
+/datum/language/zakasi/get_spoken_verb(var/msg_end)
+	switch(msg_end)
+		if("!")
+			return pick("cackles","shrieks")
+		if("?")
+			return ask_verb
+	return pick("titters","gibbers","snickers")
+
+
 /datum/language/cultcommon
 	name = LANGUAGE_CULT
 	desc = "The chants of the occult, the incomprehensible."
