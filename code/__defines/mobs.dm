@@ -196,6 +196,7 @@
 #define BP_VOICE		"vocal synthesiser"
 #define BP_STACK		"stack"
 #define BP_OPTICS		"optics"
+#define BP_SONAR		"sonar"
 
 // Limbs.
 #define BP_L_FOOT "l_foot"

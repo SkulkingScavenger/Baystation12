@@ -1,18 +1,14 @@
-/obj/item/organ/internal/ears/
-	name = "ears"
-	parent_organ = BP_HEAD
-
-/obj/item/organ/internal/lungs/zakasi
-	name = "air capillary sack"
-	icon_state = "vox lung"
+/obj/item/organ/external/head/zakasi
+	ear_icon = "ears_m"
+	ear_icon_location = 'icons/mob/human_races/r_zakasi.dmi'
 
 /obj/item/organ/internal/kidneys/zakasi
 	name = "toxin processor"
-	icon_state = "lungs" 
-	color = "#99ccff"
+	icon_state = "lungs"
+	color = "#552266"
 	parent_organ = BP_CHEST
 
 /obj/item/organ/internal/liver/zakasi
 	name = "waste tract"
 	parent_organ = BP_CHEST
-	color = "#0033cc"
+	color = "#773300"

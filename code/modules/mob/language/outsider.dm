@@ -85,11 +85,12 @@
 /datum/language/vox/get_random_name()
 	return ..(FEMALE,1,6)
 
+
 /datum/language/zakasi
 	name = "Zakasi"
 	desc = "The annoying secret language of the Zakasi space pirates."
 	speech_verb = "gibbers"
-	whisper_verb = "titters softly"
+	whisper_verb = "softly titters"
 	ask_verb = "sneers"
 	exclaim_verb = "cackles"
 	colour = "zakasi"

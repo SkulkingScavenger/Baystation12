@@ -18,7 +18,9 @@
 
 	var/can_intake_reagents = 1
 	var/eye_icon = "eyes_s"
+	var/ear_icon = "ears"
 	var/eye_icon_location = 'icons/mob/human_face.dmi'
+	var/ear_icon_location = 'icons/mob/human_races/r_zakasi.dmi'
 
 	var/has_lips
 
@@ -63,7 +65,7 @@
 	..()
 
 	if(owner)
-		if(eye_icon)
+		if(eye_icon && owner.species.has_organ[BP_EYES])
 			var/icon/eyes_icon = new/icon(eye_icon_location, eye_icon)
 			var/obj/item/organ/internal/eyes/eyes = owner.internal_organs_by_name[owner.species.vision_organ ? owner.species.vision_organ : BP_EYES]
 			if(eyes)
@@ -72,12 +74,15 @@
 				eyes_icon.Blend(rgb(128,0,0), ICON_ADD)
 			mob_icon.Blend(eyes_icon, ICON_OVERLAY)
 			overlays |= eyes_icon
-
 		if(owner.lip_style && robotic < ORGAN_ROBOT && (species && (species.appearance_flags & HAS_LIPS)))
 			var/icon/lip_icon = new/icon('icons/mob/human_face.dmi', "lips_[owner.lip_style]_s")
 			overlays |= lip_icon
 			mob_icon.Blend(lip_icon, ICON_OVERLAY)
-
+		if(owner.species.has_organ[BP_EARS])
+			var/icon/ears_icon = new/icon(ear_icon_location, ear_icon)
+			ears_icon.Blend(rgb(0,0,0), ICON_ADD)
+			mob_icon.Blend(ears_icon, ICON_OVERLAY)
+			overlays |= ears_icon
 		overlays |= get_hair_icon()
 
 	return mob_icon
