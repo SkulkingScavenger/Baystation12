@@ -14,7 +14,7 @@
 		Zakasi clans are frequently encountered lurking on the fringes of imperial space, where they prey \
 		upon derelict ships and isolated outposts. Although widely regarded as a menace and universally \
 		distrusted, it is not uncommon for unscrupulous groups to have dealings with them. "
-	
+	death_message = "emits a hyperaudible scream and collapses twitching in a puddle of ichor..."
 
 	speech_sounds = list('sound/voice/shriek1.ogg')
 	speech_chance = 20
@@ -55,7 +55,7 @@
 	has_limbs = list(
 		BP_CHEST =  list("path" = /obj/item/organ/external/chest),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/zakasi),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),
@@ -70,8 +70,8 @@
 	has_organ = list(
 		BP_HEART =    /obj/item/organ/internal/heart,
 		BP_LUNGS =    /obj/item/organ/internal/lungs,
-		BP_LIVER =    /obj/item/organ/internal/liver,
-		BP_KIDNEYS =  /obj/item/organ/internal/kidneys,
+		BP_LIVER =    /obj/item/organ/internal/liver/zakasi,
+		BP_KIDNEYS =  /obj/item/organ/internal/kidneys/zakasi,
 		BP_BRAIN =    /obj/item/organ/internal/brain,
 		BP_EARS =   /obj/item/organ/internal/ears,
 		BP_STACK =    /obj/item/organ/internal/stack
@@ -88,21 +88,6 @@
 /datum/species/zakasi/get_random_name(var/gender)
 	var/datum/language/species_language = all_languages[default_language]
 	return species_language.get_random_name(gender)
-
-/datum/species/zakasi/equip_survival_gear(var/mob/living/carbon/human/H)
-	H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
-
-	if(istype(H.get_equipped_item(slot_back), /obj/item/weapon/storage/backpack))
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/nitrogen(H), slot_r_hand)
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/vox(H.back), slot_in_backpack)
-		H.internal = H.r_hand
-	else
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/nitrogen(H), slot_back)
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/vox(H), slot_r_hand)
-		H.internal = H.back
-
-	if(H.internals)
-		H.internals.icon_state = "internal1"
 
 /datum/species/zakasi/disfigure_msg(var/mob/living/carbon/human/H)
 	var/datum/gender/T = gender_datums[H.get_gender()]

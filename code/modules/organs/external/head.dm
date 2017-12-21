@@ -20,7 +20,7 @@
 	var/eye_icon = "eyes_s"
 	var/ear_icon = "ears"
 	var/eye_icon_location = 'icons/mob/human_face.dmi'
-	var/ear_icon_location = 'icons/mob/human_races/r_zakasi.dmi'
+	var/ear_icon_location = 'icons/mob/human_face.dmi'//'icons/mob/human_races/r_zakasi.dmi'
 
 	var/has_lips
 

@@ -1,5 +1,4 @@
 /obj/item/organ/external/head/zakasi
-	ear_icon = "ears_m"
 	ear_icon_location = 'icons/mob/human_races/r_zakasi.dmi'
 
 /obj/item/organ/internal/kidneys/zakasi
