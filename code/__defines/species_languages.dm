@@ -46,7 +46,7 @@
 #define LANGUAGE_CULT "Cult"
 #define LANGUAGE_SIGN "Sign Language"
 #define LANGUAGE_INDEPENDENT "Independent"
-#define LANGUAGE_NABBER "Serpentid"
+#define LANGUAGE_NABBER "Nabber"
 #define LANGUAGE_SPACER "Spacer"
 #define LANGUAGE_BOGANI "Bogani"
 #define LANGUAGE_ZAKASI "Zakasi"

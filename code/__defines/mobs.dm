@@ -258,7 +258,7 @@
 #define SPECIES_IPC "Machine"
 #define SPECIES_UNATHI "Unathi"
 #define SPECIES_SKRELL "Skrell"
-#define SPECIES_NABBER "Giant Armoured Serpentid"
+#define SPECIES_NABBER "Giant Armoured Nabber"
 #define SPECIES_PROMETHEAN "Promethean"
 #define SPECIES_BOGANI "Bogani"
 #define SPECIES_EGYNO "Egyno"

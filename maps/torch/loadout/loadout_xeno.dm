@@ -92,7 +92,7 @@
 
 // Misc clothing
 /datum/gear/uniform/harness
-	display_name = "gear harness (Full Body Prosthetic, Diona, Giant Armoured Serpentid)"
+	display_name = "gear harness (Full Body Prosthetic, Diona, Giant Armoured Nabber)"
 	path = /obj/item/clothing/under/harness
 	sort_category = "Xenowear"
 	whitelisted = list(SPECIES_IPC,SPECIES_DIONA, SPECIES_NABBER)
@@ -215,3 +215,10 @@
 	sort_category = "Xenowear"
 	whitelisted = list(SPECIES_VOX)
 	allowed_roles = /datum/job/merchant //Since that is the only role vox can be beside stowaway.
+
+// Zakasi clothing
+/datum/gear/mask/gas/zakasi
+	display_name = "Zakasi breathing mask"
+	path = /obj/item/clothing/mask/gas/zakasi
+	sort_category = "Xenowear"
+	whitelisted = list(SPECIES_ZAKASI)

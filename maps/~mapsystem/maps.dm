@@ -105,22 +105,28 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 
 	//Factions prefs stuff
 	var/list/citizenship_choices = list(
-		"Earth",
-		"Mars",
-		"Terra",
-		"Gaia",
-		"Moghes",
+		"Imperium of Man",
+		"Galactic Republic",
+		"The 3rd Foundation",
+		"Terran Dominion",
+		"Sable Principalities",
+		"Skulkingsville",
 		"Ahdomai",
-		"Qerrbalak"
+		"Qerrbalak",
+		"Kingdom of Space Jerusalem",
+		"Zakasi Scavenger Clans"
 	)
 
 	var/list/home_system_choices = list(
 		"Sol",
-		"Nyx",
+		"Korhal",
 		"Tau Ceti",
 		"Epsilon Ursae Minoris",
 		"S'randarr",
-		"Gilgamesh"
+		"Gilgamesh",
+		"Dagobah",
+		"The Space Holy Lands",
+		"Zakaas"
 		)
 
 	var/list/faction_choices = list(
@@ -135,7 +141,10 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		"Grayson Manufactories Ltd.",
 		"Aether Atmospherics",
 		"Zeng-Hu Pharmaceuticals",
-		"Hephaestus Industries"
+		"Hephaestus Industries",
+		"BloodFang Clan",
+		"Space Templar",
+		"Space Pirates"
 		)
 
 	var/list/religion_choices = list(
@@ -143,9 +152,15 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		"Hinduism",
 		"Buddhist",
 		"Islamic",
-		"Christian",
+		"Catholic",
+		"Orthodox",
+		"Heretical Sects",
 		"Agnostic",
-		"Deist"
+		"Deist",
+		"DEUS VULT",
+		"Kekism",
+		"Traditional Yeenoghuism",
+		"Generically Superstitious"
 		)
 
 /datum/map/New()
